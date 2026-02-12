@@ -16,45 +16,81 @@ export default function Home() {
             Explore Services
           </a>
 
-          {/* ================= CENTERED SLIDESHOW ================= */}
+          {/* ================= DYNAMIC FADE SLIDER ================= */}
           <div
             id="heroCarousel"
-            className="carousel slide mt-5 mx-auto"
+            className="carousel carousel-fade slide mt-5 mx-auto"
             data-bs-ride="carousel"
+            data-bs-interval="3500"
             style={{
               maxWidth: "850px",
               borderRadius: "15px",
               overflow: "hidden",
-              boxShadow: "0 20px 60px rgba(0,0,0,0.4)"
+              boxShadow: "0 20px 60px rgba(0,0,0,0.5)"
             }}
           >
             <div className="carousel-inner">
 
+              {/* Slide 1 */}
               <div className="carousel-item active">
                 <img
                   src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
                   className="d-block w-100"
                   alt="IT Infrastructure"
                 />
+                <div className="carousel-caption d-none d-md-block">
+                  <h5>Enterprise Infrastructure</h5>
+                  <p>Modern, scalable, secure architecture.</p>
+                </div>
               </div>
 
+              {/* Slide 2 */}
               <div className="carousel-item">
                 <img
                   src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
                   className="d-block w-100"
                   alt="Cloud Solutions"
                 />
+                <div className="carousel-caption d-none d-md-block">
+                  <h5>Cloud Transformation</h5>
+                  <p>Scalable cloud systems built for growth.</p>
+                </div>
               </div>
 
+              {/* Slide 3 */}
               <div className="carousel-item">
                 <img
                   src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
                   className="d-block w-100"
                   alt="Cybersecurity"
                 />
+                <div className="carousel-caption d-none d-md-block">
+                  <h5>Cybersecurity Strategy</h5>
+                  <p>Enterprise-grade protection and compliance.</p>
+                </div>
               </div>
 
             </div>
+
+            {/* Controls */}
+            <button
+              className="carousel-control-prev"
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide="prev"
+            >
+              <span className="carousel-control-prev-icon"></span>
+            </button>
+
+            <button
+              className="carousel-control-next"
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide="next"
+            >
+              <span className="carousel-control-next-icon"></span>
+            </button>
+
           </div>
         </div>
       </section>
@@ -99,12 +135,9 @@ export default function Home() {
       <section id="contact" className="py-5 text-center bg-dark text-white">
         <div className="container">
           <h2>Contact Core360IT</h2>
-          <p className="mt-3">
-            📧 support@core360it.com
-          </p>
-          <p>
-            📞 +230 5251 9002
-          </p>
+          <p className="mt-3">📧 support@core360it.com</p>
+          <p>📞 +230 5251 9002</p>
+
           <a
             href="https://wa.me/23052519002"
             target="_blank"
