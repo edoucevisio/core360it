@@ -1,76 +1,84 @@
 export default function Home() {
   return (
     <>
-      {/* FULL WIDTH HERO SLIDER */}
-      <section style={{ marginTop: "80px" }}>
-        <div
-          id="heroCarousel"
-          className="carousel carousel-fade slide"
-        >
-          <div className="carousel-inner">
+      {/* HERO SECTION */}
+      <section
+        className="d-flex align-items-center justify-content-center"
+        style={{
+          minHeight: "100vh",
+          background: "linear-gradient(135deg,#0f172a,#1e293b)",
+          paddingTop: "100px",
+          paddingBottom: "60px"
+        }}
+      >
+        <div className="container text-center">
 
-            {[
-              "comprehensiveitsolution.webp",
-              "empoweringyourbusinessthroughit.webp",
-              "manageditservices.webp",
-              "optimizeyouritinfrastructure.webp",
-              "secureyouritenvironment.webp"
-            ].map((img, index) => (
-              <div
-                key={index}
-                className={`carousel-item ${index === 0 ? "active" : ""}`}
-              >
+          {/* CENTERED SLIDER */}
+          <div
+            id="heroCarousel"
+            className="carousel carousel-fade slide mx-auto"
+            style={{
+              maxWidth: "1000px",
+              borderRadius: "20px",
+              overflow: "hidden",
+              boxShadow: "0 30px 80px rgba(0,0,0,0.7)"
+            }}
+          >
+            <div className="carousel-inner">
+
+              {[
+                "comprehensiveitsolution.webp",
+                "empoweringyourbusinessthroughit.webp",
+                "manageditservices.webp",
+                "optimizeyouritinfrastructure.webp",
+                "secureyouritenvironment.webp"
+              ].map((img, index) => (
                 <div
-                  style={{
-                    height: "100vh",
-                    backgroundImage: `url(https://assets.core360it.com/${img})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    position: "relative"
-                  }}
+                  key={index}
+                  className={`carousel-item ${index === 0 ? "active" : ""}`}
                 >
-                  {/* DARK OVERLAY */}
                   <div
                     style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      width: "100%",
-                      height: "100%",
-                      background: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6))"
-                    }}
-                  ></div>
-
-                  {/* CENTER CONTENT */}
-                  <div
-                    className="d-flex flex-column justify-content-center align-items-center text-center text-white"
-                    style={{
-                      height: "100%",
-                      position: "relative",
-                      zIndex: 2
+                      height: "550px",
+                      backgroundImage: `url(https://assets.core360it.com/${img})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      position: "relative"
                     }}
                   >
-                    <h1 className="display-4 fw-bold">
-                      Core360IT
-                    </h1>
-
-                    <p className="lead mt-3">
-                      Strategic IT. Global Reach. 360° Coverage.
-                    </p>
-
-                    <a
-                      href="#services"
-                      className="btn btn-success btn-lg mt-4"
-                    >
-                      Explore Services
-                    </a>
+                    {/* DARK OVERLAY */}
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        background: "rgba(0,0,0,0.45)"
+                      }}
+                    ></div>
                   </div>
-
                 </div>
-              </div>
-            ))}
+              ))}
 
+            </div>
           </div>
+
+          {/* TEXT BELOW SLIDER (CLEAN) */}
+          <div className="mt-5 text-white">
+            <h2 className="fw-bold">
+              Strategic IT. Global Reach. 360° Coverage.
+            </h2>
+
+            <p className="lead mt-3 opacity-75">
+              Enterprise IT consulting, cloud architecture and cybersecurity solutions.
+            </p>
+
+            <a href="#services" className="btn btn-success btn-lg mt-3">
+              Explore Services
+            </a>
+          </div>
+
         </div>
       </section>
 
@@ -78,7 +86,7 @@ export default function Home() {
       <section
         id="services"
         className="py-5 text-center text-white"
-        style={{ background: "#0f172a" }}
+        style={{ background: "#111827" }}
       >
         <div className="container">
           <h2 className="mb-5">Our Services</h2>
@@ -105,28 +113,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CONTACT */}
-      <section
-        id="contact"
-        className="py-5 text-center text-white"
-        style={{ background: "#111827" }}
-      >
-        <div className="container">
-          <h2>Contact Core360IT</h2>
-          <p className="mt-3">support@core360it.com</p>
-          <p>+230 5251 9002</p>
-
-          <a
-            href="https://wa.me/23052519002"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-success mt-3"
-          >
-            Chat on WhatsApp
-          </a>
         </div>
       </section>
     </>
