@@ -16,13 +16,21 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
+
       <body>
 
-        {/* NAVBAR */}
+        {/* ================= NAVBAR ================= */}
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container">
-            <a className="navbar-brand fw-bold" href="#">
-              Core360IT
+
+            <a className="navbar-brand d-flex align-items-center" href="#">
+              <img
+                src="https://assets.core360it.com/core360ilogo.png"
+                alt="Core360IT Logo"
+                height="40"
+                className="me-2"
+              />
+              <span className="fw-bold">Core360IT</span>
             </a>
 
             <button
@@ -40,28 +48,23 @@ export default function RootLayout({ children }) {
             >
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Home
-                  </a>
+                  <a className="nav-link" href="#">Home</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#services">
-                    Services
-                  </a>
+                  <a className="nav-link" href="#services">Services</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#contact">
-                    Contact
-                  </a>
+                  <a className="nav-link" href="#contact">Contact</a>
                 </li>
               </ul>
             </div>
+
           </div>
         </nav>
 
         {children}
 
-        {/* FOOTER */}
+        {/* ================= FOOTER ================= */}
         <footer className="bg-dark text-white text-center py-4">
           © {new Date().getFullYear()} Core360IT. All rights reserved.
         </footer>
