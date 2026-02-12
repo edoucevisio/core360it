@@ -3,7 +3,7 @@ export default function Home() {
     <>
       {/* ================= HERO ================= */}
       <section className="hero-section">
-        <div className="container">
+        <div className="container text-center">
           <h1 className="display-2 fw-bold">Core360IT</h1>
           <p className="lead mt-4">
             Strategic IT. Global Reach. 360° Coverage.
@@ -147,15 +147,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= WHATSAPP FLOAT ================= */}
-      <a
-        href="https://wa.me/23052519002"
-        className="whatsapp-float"
-        target="_blank"
-        rel="noopener noreferrer"
+      {/* ================= WHATSAPP FLOAT FIXED ================= */}
+      <div
+        style={{
+          position: "fixed",
+          bottom: "25px",
+          right: "25px",
+          zIndex: 99999,
+        }}
       >
-        💬
-      </a>
+        <a
+          href="https://wa.me/23052519002"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            background: "#25D366",
+            color: "white",
+            borderRadius: "50%",
+            width: "65px",
+            height: "65px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "30px",
+            textDecoration: "none",
+            boxShadow: "0 8px 25px rgba(0,0,0,0.5)",
+          }}
+        >
+          💬
+        </a>
+      </div>
     </>
   );
 }
