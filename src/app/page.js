@@ -17,7 +17,11 @@ export default function Home() {
           </a>
 
           {/* CENTERED SLIDER */}
-          <div id="heroCarousel" className="carousel slide hero-slider" data-bs-ride="carousel">
+          <div
+            id="heroCarousel"
+            className="carousel slide hero-slider"
+            data-bs-ride="carousel"
+          >
             <div className="carousel-inner">
 
               <div className="carousel-item active">
@@ -46,7 +50,6 @@ export default function Home() {
 
             </div>
           </div>
-
         </div>
       </section>
 
@@ -123,7 +126,7 @@ export default function Home() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="py-5 text-center">
+      <section className="py-5 text-center cta-section">
         <div className="container">
           <h2>Ready to Transform Your IT Strategy?</h2>
           <p className="mt-3 opacity-75">
