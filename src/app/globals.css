@@ -9,13 +9,13 @@ body {
   color: white;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero-section {
   padding: 120px 20px 80px 20px;
   text-align: center;
 }
 
-/* Slideshow Box */
+/* Slideshow container */
 .hero-slider {
   max-width: 850px;
   margin: 50px auto 0 auto;
@@ -24,7 +24,7 @@ body {
   box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 }
 
-/* Glass Cards */
+/* ================= GLASS CARDS ================= */
 .glass-card {
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(12px);
@@ -38,7 +38,12 @@ body {
   background: rgba(255,255,255,0.12);
 }
 
-/* WhatsApp Button */
+/* ================= CTA SECTION ================= */
+.cta-section {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+}
+
+/* ================= WHATSAPP FLOAT ================= */
 .whatsapp-float {
   position: fixed;
   bottom: 25px;
@@ -46,12 +51,18 @@ body {
   background: #25D366;
   color: white;
   border-radius: 50%;
-  width: 55px;
-  height: 55px;
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 26px;
+  font-size: 28px;
   text-decoration: none;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  z-index: 9999; /* always on top */
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
 }
