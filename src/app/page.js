@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 1000); // 1 second
+    }, 3000); // 3 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -24,27 +24,30 @@ export default function Home() {
     <>
       {/* HERO SECTION */}
       <section
-        className="d-flex align-items-center justify-content-center"
         style={{
           minHeight: "100vh",
           background: "linear-gradient(135deg,#0f172a,#1e293b)",
           paddingTop: "120px",
-          paddingBottom: "60px"
+          paddingBottom: "60px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
         }}
       >
-        <div className="container text-center">
+        <div style={{ width: "100%", maxWidth: "1200px", textAlign: "center" }}>
 
-          {/* REACT SLIDER */}
+          {/* SLIDER CONTAINER */}
           <div
             style={{
-              maxWidth: "1100px",
-              height: "600px",
-              margin: "0 auto",
               position: "relative",
-              borderRadius: "25px",
+              height: "600px",
+              borderRadius: "30px",
               overflow: "hidden",
               boxShadow: "0 40px 90px rgba(0,0,0,0.7)",
-              background: "#000"
+              background: "#000",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center"
             }}
           >
             {slides.map((img, index) => (
@@ -54,10 +57,10 @@ export default function Home() {
                 alt="Core360IT Slide"
                 style={{
                   position: "absolute",
-                  width: "100%",
-                  height: "100%",
+                  maxHeight: "100%",
+                  maxWidth: "100%",
                   objectFit: "contain",
-                  transition: "opacity 0.8s ease-in-out",
+                  transition: "opacity 1s ease-in-out",
                   opacity: current === index ? 1 : 0
                 }}
               />
