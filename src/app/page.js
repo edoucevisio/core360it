@@ -16,7 +16,7 @@ export default function Home() {
             Explore Services
           </a>
 
-          {/* ================= DYNAMIC FADE SLIDER ================= */}
+          {/* ================= PREMIUM ROUNDED DYNAMIC SLIDER ================= */}
           <div
             id="heroCarousel"
             className="carousel carousel-fade slide mt-5 mx-auto"
@@ -24,9 +24,9 @@ export default function Home() {
             data-bs-interval="3500"
             style={{
               maxWidth: "850px",
-              borderRadius: "15px",
+              borderRadius: "30px", // 🔥 More rounded
               overflow: "hidden",
-              boxShadow: "0 20px 60px rgba(0,0,0,0.5)"
+              boxShadow: "0 30px 80px rgba(0,0,0,0.6)"
             }}
           >
             <div className="carousel-inner">
@@ -39,7 +39,7 @@ export default function Home() {
                   alt="IT Infrastructure"
                 />
                 <div className="carousel-caption d-none d-md-block">
-                  <h5>Enterprise Infrastructure</h5>
+                  <h5 className="fw-bold">Enterprise Infrastructure</h5>
                   <p>Modern, scalable, secure architecture.</p>
                 </div>
               </div>
@@ -52,7 +52,7 @@ export default function Home() {
                   alt="Cloud Solutions"
                 />
                 <div className="carousel-caption d-none d-md-block">
-                  <h5>Cloud Transformation</h5>
+                  <h5 className="fw-bold">Cloud Transformation</h5>
                   <p>Scalable cloud systems built for growth.</p>
                 </div>
               </div>
@@ -65,7 +65,7 @@ export default function Home() {
                   alt="Cybersecurity"
                 />
                 <div className="carousel-caption d-none d-md-block">
-                  <h5>Cybersecurity Strategy</h5>
+                  <h5 className="fw-bold">Cybersecurity Strategy</h5>
                   <p>Enterprise-grade protection and compliance.</p>
                 </div>
               </div>
