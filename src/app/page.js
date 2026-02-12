@@ -2,13 +2,32 @@ export default function Home() {
   return (
     <>
       {/* ================= HERO ================= */}
-      <section className="py-5 text-center bg-dark text-white">
+      <section
+        className="text-center text-white"
+        style={{
+          backgroundImage:
+            "url('https://assets.core360it.com/core360itbanner.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          padding: "120px 20px",
+        }}
+      >
         <div className="container">
-          <h1 className="display-3 fw-bold">Core360IT</h1>
-          <p className="lead mt-3">
+
+          <img
+            src="https://assets.core360it.com/core360itlarge.png"
+            alt="Core360IT"
+            style={{
+              maxWidth: "320px",
+              marginBottom: "30px",
+            }}
+          />
+
+          <h1 className="display-4 fw-bold">
             Strategic IT. Global Reach. 360° Coverage.
-          </p>
-          <p className="opacity-75">
+          </h1>
+
+          <p className="lead mt-3">
             Enterprise IT consulting, cloud architecture and cybersecurity solutions.
           </p>
 
@@ -16,87 +35,11 @@ export default function Home() {
             Explore Services
           </a>
 
-          {/* ================= PREMIUM ROUNDED DYNAMIC SLIDER ================= */}
-          <div
-            id="heroCarousel"
-            className="carousel carousel-fade slide mt-5 mx-auto"
-            data-bs-ride="carousel"
-            data-bs-interval="3500"
-            style={{
-              maxWidth: "850px",
-              borderRadius: "30px", // 🔥 More rounded
-              overflow: "hidden",
-              boxShadow: "0 30px 80px rgba(0,0,0,0.6)"
-            }}
-          >
-            <div className="carousel-inner">
-
-              {/* Slide 1 */}
-              <div className="carousel-item active">
-                <img
-                  src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
-                  className="d-block w-100"
-                  alt="IT Infrastructure"
-                />
-                <div className="carousel-caption d-none d-md-block">
-                  <h5 className="fw-bold">Enterprise Infrastructure</h5>
-                  <p>Modern, scalable, secure architecture.</p>
-                </div>
-              </div>
-
-              {/* Slide 2 */}
-              <div className="carousel-item">
-                <img
-                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
-                  className="d-block w-100"
-                  alt="Cloud Solutions"
-                />
-                <div className="carousel-caption d-none d-md-block">
-                  <h5 className="fw-bold">Cloud Transformation</h5>
-                  <p>Scalable cloud systems built for growth.</p>
-                </div>
-              </div>
-
-              {/* Slide 3 */}
-              <div className="carousel-item">
-                <img
-                  src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
-                  className="d-block w-100"
-                  alt="Cybersecurity"
-                />
-                <div className="carousel-caption d-none d-md-block">
-                  <h5 className="fw-bold">Cybersecurity Strategy</h5>
-                  <p>Enterprise-grade protection and compliance.</p>
-                </div>
-              </div>
-
-            </div>
-
-            {/* Controls */}
-            <button
-              className="carousel-control-prev"
-              type="button"
-              data-bs-target="#heroCarousel"
-              data-bs-slide="prev"
-            >
-              <span className="carousel-control-prev-icon"></span>
-            </button>
-
-            <button
-              className="carousel-control-next"
-              type="button"
-              data-bs-target="#heroCarousel"
-              data-bs-slide="next"
-            >
-              <span className="carousel-control-next-icon"></span>
-            </button>
-
-          </div>
         </div>
       </section>
 
       {/* ================= SERVICES ================= */}
-      <section id="services" className="py-5 text-center bg-black text-white">
+      <section id="services" className="py-5 text-center bg-dark text-white">
         <div className="container">
           <h2 className="mb-5">Our Services</h2>
 
@@ -132,7 +75,7 @@ export default function Home() {
       </section>
 
       {/* ================= CONTACT ================= */}
-      <section id="contact" className="py-5 text-center bg-dark text-white">
+      <section id="contact" className="py-5 text-center bg-black text-white">
         <div className="container">
           <h2>Contact Core360IT</h2>
           <p className="mt-3">📧 support@core360it.com</p>
