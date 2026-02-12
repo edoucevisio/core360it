@@ -94,4 +94,65 @@ export default function Home() {
           <div className="row g-4">
             <div className="col-md-4">
               <div className="glass-card p-4 h-100">
-                <h5>Strategic Vision
+                <h5>Strategic Vision</h5>
+                <p>
+                  We align IT infrastructure with long-term business growth and operational efficiency.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-md-4">
+              <div className="glass-card p-4 h-100">
+                <h5>Enterprise Security</h5>
+                <p>
+                  Built with compliance, resilience and cybersecurity best practices at the core.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-md-4">
+              <div className="glass-card p-4 h-100">
+                <h5>Global Scalability</h5>
+                <p>
+                  Cloud-ready architecture designed to scale across regions and industries.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= CTA ================= */}
+      <section className="py-5 text-center">
+        <div className="container">
+          <h2>Ready to Transform Your IT Strategy?</h2>
+          <p className="mt-3 opacity-75">
+            Let’s build scalable, secure and future-proof technology solutions.
+          </p>
+          <a href="#contact" className="btn btn-outline-light btn-lg mt-3">
+            Schedule Consultation
+          </a>
+        </div>
+      </section>
+
+      {/* ================= CONTACT ================= */}
+      <section id="contact" className="py-5 text-center">
+        <div className="container">
+          <h2>Contact Core360IT</h2>
+          <p className="mt-3">Email: support@core360it.com</p>
+          <p>Phone: +230 5251 9002</p>
+        </div>
+      </section>
+
+      {/* ================= WHATSAPP FLOAT ================= */}
+      <a
+        href="https://wa.me/23052519002"
+        className="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        💬
+      </a>
+    </>
+  );
+}
