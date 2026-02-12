@@ -1,11 +1,23 @@
 export default function Home() {
   return (
     <>
-      {/* HERO */}
+      {/* HERO SECTION */}
       <section className="text-center text-white py-5">
         <div className="container">
 
-          <h1 className="display-4 fw-bold">
+          {/* PROFESSIONAL RESIZED LOGO */}
+          <img
+            src="https://assets.core360it.com/core360itlarge.png"
+            alt="Core360IT Logo"
+            style={{
+              width: "100%",
+              maxWidth: "420px",   // controlled resize
+              height: "auto",      // keeps correct proportions
+              marginBottom: "30px"
+            }}
+          />
+
+          <h1 className="display-5 fw-bold">
             Strategic IT. Global Reach. 360° Coverage.
           </h1>
 
@@ -17,7 +29,7 @@ export default function Home() {
             Explore Services
           </a>
 
-          {/* SLIDER */}
+          {/* DYNAMIC SLIDER */}
           <div
             id="heroCarousel"
             className="carousel carousel-fade slide mt-5 mx-auto"
