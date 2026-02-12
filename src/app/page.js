@@ -7,21 +7,22 @@ export default function Home() {
         style={{
           minHeight: "100vh",
           background: "linear-gradient(135deg,#0f172a,#1e293b)",
-          paddingTop: "100px",
+          paddingTop: "120px",
           paddingBottom: "60px"
         }}
       >
         <div className="container text-center">
 
-          {/* CENTERED SLIDER */}
+          {/* SLIDER */}
           <div
             id="heroCarousel"
             className="carousel carousel-fade slide mx-auto"
             style={{
-              maxWidth: "1000px",
-              borderRadius: "20px",
+              maxWidth: "1100px",
+              borderRadius: "25px",
               overflow: "hidden",
-              boxShadow: "0 30px 80px rgba(0,0,0,0.7)"
+              boxShadow: "0 40px 90px rgba(0,0,0,0.7)",
+              background: "#000"
             }}
           >
             <div className="carousel-inner">
@@ -38,25 +39,21 @@ export default function Home() {
                   className={`carousel-item ${index === 0 ? "active" : ""}`}
                 >
                   <div
+                    className="d-flex justify-content-center align-items-center"
                     style={{
-                      height: "550px",
-                      backgroundImage: `url(https://assets.core360it.com/${img})`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                      position: "relative"
+                      height: "600px",
+                      background: "#000"
                     }}
                   >
-                    {/* DARK OVERLAY */}
-                    <div
+                    <img
+                      src={`https://assets.core360it.com/${img}`}
+                      alt="Core360IT Slide"
                       style={{
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        width: "100%",
-                        height: "100%",
-                        background: "rgba(0,0,0,0.45)"
+                        maxHeight: "100%",
+                        maxWidth: "100%",
+                        objectFit: "contain"
                       }}
-                    ></div>
+                    />
                   </div>
                 </div>
               ))}
@@ -64,14 +61,14 @@ export default function Home() {
             </div>
           </div>
 
-          {/* TEXT BELOW SLIDER (CLEAN) */}
+          {/* TEXT BELOW */}
           <div className="mt-5 text-white">
             <h2 className="fw-bold">
               Strategic IT. Global Reach. 360° Coverage.
             </h2>
 
             <p className="lead mt-3 opacity-75">
-              Enterprise IT consulting, cloud architecture and cybersecurity solutions.
+              Enterprise IT consulting, cloud solutions and cybersecurity expertise.
             </p>
 
             <a href="#services" className="btn btn-success btn-lg mt-3">
@@ -92,17 +89,18 @@ export default function Home() {
           <h2 className="mb-5">Our Services</h2>
 
           <div className="row g-4">
+
             <div className="col-md-4">
               <div className="p-4 rounded shadow" style={{ background: "#1e293b" }}>
                 <h5>IT Consulting</h5>
-                <p>Strategic advisory aligned with business growth.</p>
+                <p>Strategic advisory aligned with business transformation.</p>
               </div>
             </div>
 
             <div className="col-md-4">
               <div className="p-4 rounded shadow" style={{ background: "#1e293b" }}>
                 <h5>Managed IT Services</h5>
-                <p>Proactive monitoring and enterprise infrastructure management.</p>
+                <p>Proactive monitoring and cloud infrastructure management.</p>
               </div>
             </div>
 
@@ -112,6 +110,7 @@ export default function Home() {
                 <p>Advanced protection and compliance frameworks.</p>
               </div>
             </div>
+
           </div>
         </div>
       </section>
