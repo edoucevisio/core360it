@@ -4,27 +4,28 @@ import Script from "next/script";
 export const metadata = {
   title: "Core360IT | Enterprise IT Solutions",
   description:
-    "Comprehensive IT solutions, managed services and cybersecurity expertise.",
+    "Strategic IT consulting, managed services and cybersecurity solutions.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Bootstrap CDN */}
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet"
         />
       </head>
 
-      <body style={{ margin: 0 }}>
+      <body style={{ margin: 0, background: "#0f172a" }}>
 
         {/* NAVBAR */}
         <nav
           className="navbar navbar-expand-lg navbar-dark fixed-top"
           style={{
-            background: "rgba(15,23,42,0.85)",
-            backdropFilter: "blur(10px)"
+            background: "rgba(15,23,42,0.9)",
+            backdropFilter: "blur(8px)"
           }}
         >
           <div className="container">
@@ -33,12 +34,12 @@ export default function RootLayout({ children }) {
               <img
                 src="https://assets.core360it.com/core360ilogo.png"
                 alt="Core360IT"
-                height="38"
+                height="40"
                 style={{
-                  borderRadius: "8px",
-                  marginRight: "10px",
+                  borderRadius: "10px",
                   background: "white",
-                  padding: "4px"
+                  padding: "4px",
+                  marginRight: "10px"
                 }}
               />
               <span className="fw-bold">Core360IT</span>
@@ -46,9 +47,15 @@ export default function RootLayout({ children }) {
 
             <div className="collapse navbar-collapse justify-content-end">
               <ul className="navbar-nav">
-                <li className="nav-item"><a className="nav-link text-light" href="#">Home</a></li>
-                <li className="nav-item"><a className="nav-link text-light" href="#services">Services</a></li>
-                <li className="nav-item"><a className="nav-link text-light" href="#contact">Contact</a></li>
+                <li className="nav-item">
+                  <a className="nav-link text-light" href="#">Home</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link text-light" href="#services">Services</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link text-light" href="#contact">Contact</a>
+                </li>
               </ul>
             </div>
 
@@ -57,6 +64,30 @@ export default function RootLayout({ children }) {
 
         {children}
 
+        {/* WhatsApp Floating Button */}
+        <a
+          href="https://wa.me/23052519002"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            position: "fixed",
+            bottom: "20px",
+            right: "20px",
+            zIndex: 999,
+          }}
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+            alt="WhatsApp"
+            width="55"
+            style={{
+              borderRadius: "50%",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.6)"
+            }}
+          />
+        </a>
+
+        {/* Bootstrap JS */}
         <Script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
           strategy="afterInteractive"
