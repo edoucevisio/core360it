@@ -6,37 +6,46 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body style={{margin:0, fontFamily:"Arial, sans-serif"}}>
-        
-        <nav style={{
-          background:"#0F172A",
-          padding:"15px 30px",
-          display:"flex",
-          justifyContent:"space-between",
-          alignItems:"center",
-          color:"white"
-        }}>
-          <div style={{fontWeight:"bold", fontSize:"1.2rem"}}>
-            Core360IT
-          </div>
+      <head>
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+        />
+      </head>
 
-          <div style={{display:"flex", gap:"25px"}}>
-            <a href="#" style={{color:"white", textDecoration:"none"}}>Home</a>
-            <a href="#services" style={{color:"white", textDecoration:"none"}}>Services</a>
-            <a href="#contact" style={{color:"white", textDecoration:"none"}}>Contact</a>
+      <body>
+
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+          <div className="container-fluid">
+            <a className="navbar-brand fw-bold" href="#">Core360IT</a>
+
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+
+            <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <a className="nav-link" href="#">Home</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#services">Services</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
 
         {children}
 
-        <footer style={{
-          background:"#0F172A",
-          color:"white",
-          padding:"30px",
-          textAlign:"center"
-        }}>
+        <footer className="bg-dark text-white text-center py-4">
           © {new Date().getFullYear()} Core360IT. All rights reserved.
         </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
       </body>
     </html>
