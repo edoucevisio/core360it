@@ -31,4 +31,11 @@
       </div>
     </div>
   </div>
+        <a
+          href="https://wa.me/23052519002"
+          className="whatsapp-float"
+          target="_blank"
+      >
+          💬
+      </a>
 </section>
