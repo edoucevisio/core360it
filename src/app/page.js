@@ -1,9 +1,45 @@
 export default function Home() {
   return (
     <>
-      {/* ================= HERO SECTION ================= */}
+      {/* ================= HERO WITH SLIDESHOW ================= */}
       <section className="hero-section">
-        <div className="container text-center">
+
+        <div id="heroCarousel" className="carousel slide position-absolute w-100 h-100" data-bs-ride="carousel">
+          <div className="carousel-inner h-100">
+
+            <div className="carousel-item active h-100">
+              <div style={{
+                backgroundImage: "url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                height: "100%"
+              }} />
+            </div>
+
+            <div className="carousel-item h-100">
+              <div style={{
+                backgroundImage: "url('https://images.unsplash.com/photo-1519389950473-47ba0277781c')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                height: "100%"
+              }} />
+            </div>
+
+            <div className="carousel-item h-100">
+              <div style={{
+                backgroundImage: "url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                height: "100%"
+              }} />
+            </div>
+
+          </div>
+        </div>
+
+        <div className="hero-overlay"></div>
+
+        <div className="container hero-content text-center">
           <h1 className="display-2 fw-bold">Core360IT</h1>
           <p className="lead mt-4">
             Strategic IT. Global Reach. 360° Coverage.
@@ -18,7 +54,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= SERVICES SECTION ================= */}
+      {/* ================= SERVICES ================= */}
       <section id="services" className="py-5">
         <div className="container text-center">
           <h2 className="mb-5">Our Services</h2>
@@ -90,7 +126,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= CALL TO ACTION ================= */}
+      {/* ================= CTA ================= */}
       <section className="py-5 text-center">
         <div className="container">
           <h2>Ready to Transform Your IT Strategy?</h2>
@@ -103,7 +139,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= CONTACT SECTION ================= */}
+      {/* ================= CONTACT ================= */}
       <section id="contact" className="py-5 text-center">
         <div className="container">
           <h2>Contact Core360IT</h2>
