@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Bootstrap CDN */}
+        {/* Bootstrap CSS CDN */}
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -24,8 +24,8 @@ export default function RootLayout({ children }) {
         <nav
           className="navbar navbar-expand-lg navbar-dark fixed-top"
           style={{
-            background: "rgba(15,23,42,0.9)",
-            backdropFilter: "blur(8px)"
+            background: "rgba(15,23,42,0.95)",
+            backdropFilter: "blur(10px)"
           }}
         >
           <div className="container">
@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
                 alt="Core360IT"
                 height="40"
                 style={{
-                  borderRadius: "10px",
+                  borderRadius: "8px",
                   background: "white",
                   padding: "4px",
                   marginRight: "10px"
@@ -45,7 +45,16 @@ export default function RootLayout({ children }) {
               <span className="fw-bold">Core360IT</span>
             </a>
 
-            <div className="collapse navbar-collapse justify-content-end">
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+
+            <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
                   <a className="nav-link text-light" href="#">Home</a>
@@ -87,28 +96,11 @@ export default function RootLayout({ children }) {
           />
         </a>
 
-        {/* Bootstrap JS */}
+        {/* Bootstrap JS CDN */}
         <Script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
           strategy="afterInteractive"
         />
-
-        {/* 1 SECOND AUTO SLIDE */}
-        <Script id="carousel-init" strategy="afterInteractive">
-{`
-document.addEventListener("DOMContentLoaded", function () {
-  const el = document.querySelector("#heroCarousel");
-  if (el && typeof bootstrap !== "undefined") {
-    new bootstrap.Carousel(el, {
-      interval: 1000,
-      ride: "carousel",
-      pause: false,
-      wrap: true
-    });
-  }
-});
-`}
-        </Script>
 
       </body>
     </html>
