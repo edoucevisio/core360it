@@ -1,27 +1,25 @@
 export default function Home() {
   return (
     <>
-      {/* HERO SECTION */}
-      <section
-        className="text-center text-white d-flex align-items-center hero-gradient"
-        style={{ minHeight: "100vh" }}
-      >
+      {/* HERO */}
+      <section className="hero-section">
         <div className="container">
-          <h1 className="display-3 fw-bold">Core360IT</h1>
-          <p className="lead mt-3">
+          <h1 className="display-2 fw-bold">Core360IT</h1>
+          <p className="lead mt-4">
             Strategic IT. Global Reach. 360° Coverage.
           </p>
-          <p className="mt-3">
-            Enterprise IT consulting, cloud solutions and cybersecurity services.
+          <p className="mt-3 opacity-75">
+            Enterprise IT consulting, cloud architecture and cybersecurity solutions.
           </p>
+
           <a href="#services" className="btn btn-light btn-lg mt-4">
             Explore Services
           </a>
         </div>
       </section>
 
-      {/* SERVICES SECTION */}
-      <section id="services" className="py-5 hero-gradient text-white">
+      {/* SERVICES */}
+      <section id="services" className="py-5">
         <div className="container text-center">
           <h2 className="mb-5">Our Services</h2>
 
@@ -39,7 +37,7 @@ export default function Home() {
               <div className="glass-card p-4 h-100">
                 <h5>Cloud Solutions</h5>
                 <p>
-                  Secure, scalable cloud architecture for modern enterprises.
+                  Secure, scalable cloud infrastructure built for global enterprises.
                 </p>
               </div>
             </div>
@@ -48,7 +46,7 @@ export default function Home() {
               <div className="glass-card p-4 h-100">
                 <h5>Cybersecurity</h5>
                 <p>
-                  Risk mitigation, compliance, and enterprise-grade security solutions.
+                  Enterprise security frameworks, risk mitigation and compliance strategies.
                 </p>
               </div>
             </div>
@@ -56,18 +54,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONTACT SECTION */}
-      <section id="contact" className="py-5 bg-light text-dark">
-        <div className="container text-center">
-          <h2>Contact Us</h2>
-          <p className="mt-3">
-            Email: support@core360it.com
+      {/* CTA SECTION */}
+      <section className="py-5 text-center">
+        <div className="container">
+          <h2>Ready to Transform Your IT Strategy?</h2>
+          <p className="mt-3 opacity-75">
+            Let’s build scalable, secure and future-proof technology solutions.
           </p>
-          <p>Phone: +230 5251 9002</p>
+          <a href="#contact" className="btn btn-outline-light btn-lg mt-3">
+            Schedule Consultation
+          </a>
         </div>
       </section>
 
-      {/* WHATSAPP FLOAT BUTTON */}
+      {/* WHATSAPP FLOAT */}
       <a
         href="https://wa.me/23052519002"
         className="whatsapp-float"
