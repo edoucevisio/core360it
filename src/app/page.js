@@ -12,12 +12,21 @@ export default function Home() {
 
   const [current, setCurrent] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 3000); // 3 seconds
+  const [count, setCount] = useState(0);
 
-    return () => clearInterval(interval);
+  useEffect(() => {
+    const slider = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 3000);
+
+    const counter = setInterval(() => {
+      setCount((prev) => (prev < 100 ? prev + 1 : 100));
+    }, 20);
+
+    return () => {
+      clearInterval(slider);
+      clearInterval(counter);
+    };
   }, []);
 
   return (
@@ -28,7 +37,7 @@ export default function Home() {
           minHeight: "100vh",
           background: "linear-gradient(135deg,#0f172a,#1e293b)",
           paddingTop: "120px",
-          paddingBottom: "60px",
+          paddingBottom: "80px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center"
@@ -36,7 +45,7 @@ export default function Home() {
       >
         <div style={{ width: "100%", maxWidth: "1200px", textAlign: "center" }}>
 
-          {/* SLIDER CONTAINER */}
+          {/* SLIDER */}
           <div
             style={{
               position: "relative",
@@ -67,54 +76,92 @@ export default function Home() {
             ))}
           </div>
 
-          {/* TEXT BELOW */}
+          {/* HERO TEXT */}
           <div className="mt-5 text-white">
             <h2 className="fw-bold">
               Strategic IT. Global Reach. 360° Coverage.
             </h2>
-
             <p className="lead mt-3 opacity-75">
-              Enterprise IT consulting, cloud solutions and cybersecurity expertise.
+              Enterprise IT consulting, cloud architecture and cybersecurity expertise.
             </p>
-
-            <a href="#services" className="btn btn-success btn-lg mt-3">
-              Explore Services
-            </a>
           </div>
-
         </div>
       </section>
 
-      {/* SERVICES */}
+      {/* WHY CHOOSE US */}
       <section
-        id="services"
-        className="py-5 text-center text-white"
-        style={{ background: "#111827" }}
+        style={{
+          background: "#111827",
+          padding: "100px 0"
+        }}
       >
-        <div className="container">
-          <h2 className="mb-5">Our Services</h2>
+        <div className="container text-center text-white">
+          <h2 className="mb-5">Why Choose Core360IT</h2>
 
           <div className="row g-4">
-
-            <div className="col-md-4">
-              <div className="p-4 rounded shadow" style={{ background: "#1e293b" }}>
-                <h5>IT Consulting</h5>
-                <p>Strategic advisory aligned with business transformation.</p>
+            {[
+              {
+                title: "Enterprise Expertise",
+                text: "Deep technical knowledge across cloud, infrastructure and cybersecurity."
+              },
+              {
+                title: "24/7 Proactive Monitoring",
+                text: "We prevent problems before they impact your business."
+              },
+              {
+                title: "Scalable Solutions",
+                text: "Designed to grow with your organization."
+              }
+            ].map((item, i) => (
+              <div key={i} className="col-md-4">
+                <div
+                  style={{
+                    background: "rgba(255,255,255,0.05)",
+                    backdropFilter: "blur(10px)",
+                    borderRadius: "20px",
+                    padding: "40px",
+                    border: "1px solid rgba(255,255,255,0.1)",
+                    transition: "transform 0.3s ease"
+                  }}
+                  className="h-100"
+                >
+                  <h5>{item.title}</h5>
+                  <p className="mt-3 opacity-75">{item.text}</p>
+                </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* STATS SECTION */}
+      <section
+        style={{
+          background: "linear-gradient(135deg,#0f172a,#1e293b)",
+          padding: "100px 0"
+        }}
+      >
+        <div className="container text-center text-white">
+          <div className="row g-4">
+
+            <div className="col-md-3">
+              <h1 className="fw-bold text-success">{count}%</h1>
+              <p className="opacity-75">Client Satisfaction</p>
             </div>
 
-            <div className="col-md-4">
-              <div className="p-4 rounded shadow" style={{ background: "#1e293b" }}>
-                <h5>Managed IT Services</h5>
-                <p>Proactive monitoring and cloud infrastructure management.</p>
-              </div>
+            <div className="col-md-3">
+              <h1 className="fw-bold text-success">24/7</h1>
+              <p className="opacity-75">Monitoring & Support</p>
             </div>
 
-            <div className="col-md-4">
-              <div className="p-4 rounded shadow" style={{ background: "#1e293b" }}>
-                <h5>Cybersecurity</h5>
-                <p>Advanced protection and compliance frameworks.</p>
-              </div>
+            <div className="col-md-3">
+              <h1 className="fw-bold text-success">100+</h1>
+              <p className="opacity-75">Projects Delivered</p>
+            </div>
+
+            <div className="col-md-3">
+              <h1 className="fw-bold text-success">10+</h1>
+              <p className="opacity-75">Years Experience</p>
             </div>
 
           </div>
@@ -124,25 +171,21 @@ export default function Home() {
       {/* CONTACT */}
       <section
         id="contact"
-        className="py-5 text-center text-white"
-        style={{ background: "#0f172a" }}
+        style={{
+          background: "#0f172a",
+          padding: "100px 0"
+        }}
       >
-        <div className="container">
+        <div className="container text-center text-white">
           <h2>Contact Core360IT</h2>
-
-          <p className="mt-4 fs-5">
-            📧 support@core360it.com
-          </p>
-
-          <p className="fs-5">
-            📞 +230 5251 9002
-          </p>
+          <p className="mt-4 fs-5">📧 support@core360it.com</p>
+          <p className="fs-5">📞 +230 5251 9002</p>
 
           <a
             href="https://wa.me/23052519002"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-success mt-3"
+            className="btn btn-success mt-4 btn-lg"
           >
             Chat on WhatsApp
           </a>
