@@ -13,10 +13,13 @@ export default function Home() {
       >
         <div className="container text-center">
 
-          {/* SLIDER */}
+          {/* CAROUSEL */}
           <div
             id="heroCarousel"
-            className="carousel carousel-fade slide mx-auto"
+            className="carousel slide carousel-fade mx-auto"
+            data-bs-ride="carousel"
+            data-bs-interval="1000"
+            data-bs-pause="false"
             style={{
               maxWidth: "1100px",
               borderRadius: "25px",
@@ -61,7 +64,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* TEXT BELOW */}
+          {/* TEXT BELOW SLIDER */}
           <div className="mt-5 text-white">
             <h2 className="fw-bold">
               Strategic IT. Global Reach. 360° Coverage.
@@ -112,6 +115,34 @@ export default function Home() {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section
+        id="contact"
+        className="py-5 text-center text-white"
+        style={{ background: "#0f172a" }}
+      >
+        <div className="container">
+          <h2>Contact Core360IT</h2>
+
+          <p className="mt-4 fs-5">
+            📧 support@core360it.com
+          </p>
+
+          <p className="fs-5">
+            📞 +230 5251 9002
+          </p>
+
+          <a
+            href="https://wa.me/23052519002"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-success mt-3"
+          >
+            Chat on WhatsApp
+          </a>
         </div>
       </section>
     </>
