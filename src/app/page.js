@@ -84,4 +84,80 @@ export default function Home() {
               <div className="p-4 rounded bg-secondary h-100 shadow">
                 <h5>IT Consulting</h5>
                 <p>
-                  Strategic advisory aligned with busi
+                  Strategic advisory aligned with business growth and digital transformation.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-md-4">
+              <div className="p-4 rounded bg-secondary h-100 shadow">
+                <h5>Cloud Solutions</h5>
+                <p>
+                  Secure, scalable cloud infrastructure built for global enterprises.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-md-4">
+              <div className="p-4 rounded bg-secondary h-100 shadow">
+                <h5>Cybersecurity</h5>
+                <p>
+                  Enterprise security frameworks, risk mitigation and compliance strategies.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= CONTACT ================= */}
+      <section id="contact" className="py-5 text-center bg-dark text-white">
+        <div className="container">
+          <h2>Contact Core360IT</h2>
+          <p className="mt-3">📧 support@core360it.com</p>
+          <p>📞 +230 5251 9002</p>
+
+          <a
+            href="https://wa.me/23052519002"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-success mt-3"
+          >
+            Chat on WhatsApp
+          </a>
+        </div>
+      </section>
+
+      {/* ================= FLOATING WHATSAPP ================= */}
+      <div
+        style={{
+          position: "fixed",
+          bottom: "25px",
+          right: "25px",
+          zIndex: 99999,
+        }}
+      >
+        <a
+          href="https://wa.me/23052519002"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            background: "#25D366",
+            color: "white",
+            borderRadius: "50%",
+            width: "65px",
+            height: "65px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "28px",
+            textDecoration: "none",
+            boxShadow: "0 10px 30px rgba(0,0,0,0.6)",
+          }}
+        >
+          💬
+        </a>
+      </div>
+    </>
+  );
+}
