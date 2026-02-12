@@ -1,4 +1,25 @@
+"use client";
+import { useEffect, useState } from "react";
+
 export default function Home() {
+  const slides = [
+    "comprehensiveitsolution.webp",
+    "empoweringyourbusinessthroughit.webp",
+    "manageditservices.webp",
+    "optimizeyouritinfrastructure.webp",
+    "secureyouritenvironment.webp"
+  ];
+
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 1000); // 1 second
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       {/* HERO SECTION */}
@@ -13,58 +34,37 @@ export default function Home() {
       >
         <div className="container text-center">
 
-          {/* CAROUSEL */}
+          {/* REACT SLIDER */}
           <div
-            id="heroCarousel"
-            className="carousel slide carousel-fade mx-auto"
-            data-bs-ride="carousel"
-            data-bs-interval="1000"
-            data-bs-pause="false"
             style={{
               maxWidth: "1100px",
+              height: "600px",
+              margin: "0 auto",
+              position: "relative",
               borderRadius: "25px",
               overflow: "hidden",
               boxShadow: "0 40px 90px rgba(0,0,0,0.7)",
               background: "#000"
             }}
           >
-            <div className="carousel-inner">
-
-              {[
-                "comprehensiveitsolution.webp",
-                "empoweringyourbusinessthroughit.webp",
-                "manageditservices.webp",
-                "optimizeyouritinfrastructure.webp",
-                "secureyouritenvironment.webp"
-              ].map((img, index) => (
-                <div
-                  key={index}
-                  className={`carousel-item ${index === 0 ? "active" : ""}`}
-                >
-                  <div
-                    className="d-flex justify-content-center align-items-center"
-                    style={{
-                      height: "600px",
-                      background: "#000"
-                    }}
-                  >
-                    <img
-                      src={`https://assets.core360it.com/${img}`}
-                      alt="Core360IT Slide"
-                      style={{
-                        maxHeight: "100%",
-                        maxWidth: "100%",
-                        objectFit: "contain"
-                      }}
-                    />
-                  </div>
-                </div>
-              ))}
-
-            </div>
+            {slides.map((img, index) => (
+              <img
+                key={index}
+                src={`https://assets.core360it.com/${img}`}
+                alt="Core360IT Slide"
+                style={{
+                  position: "absolute",
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  transition: "opacity 0.8s ease-in-out",
+                  opacity: current === index ? 1 : 0
+                }}
+              />
+            ))}
           </div>
 
-          {/* TEXT BELOW SLIDER */}
+          {/* TEXT BELOW */}
           <div className="mt-5 text-white">
             <h2 className="fw-bold">
               Strategic IT. Global Reach. 360° Coverage.
