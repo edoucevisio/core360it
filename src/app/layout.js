@@ -2,7 +2,7 @@ import "./globals.css";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Core360IT | Strategic IT. Global Reach.",
+  title: "Core360IT | Strategic IT Solutions",
   description:
     "Enterprise IT consulting, cloud solutions and cybersecurity services.",
 };
@@ -11,27 +11,26 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Bootstrap CSS CDN */}
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet"
         />
       </head>
 
-      <body style={{ backgroundColor: "#111827" }}>
+      <body style={{ background: "linear-gradient(135deg,#0f172a,#1e293b)" }}>
 
-        {/* ================= NAVBAR ================= */}
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+        {/* NAVBAR */}
+        <nav className="navbar navbar-expand-lg navbar-dark bg-transparent py-3">
           <div className="container">
 
             <a className="navbar-brand d-flex align-items-center" href="#">
               <img
                 src="https://assets.core360it.com/core360ilogo.png"
                 alt="Core360IT Logo"
-                height="40"
+                height="38"
                 style={{
-                  borderRadius: "12px",
-                  padding: "4px",
+                  borderRadius: "10px",
+                  padding: "3px",
                   background: "white",
                   marginRight: "10px"
                 }}
@@ -54,13 +53,13 @@ export default function RootLayout({ children }) {
             >
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Home</a>
+                  <a className="nav-link text-light" href="#">Home</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#services">Services</a>
+                  <a className="nav-link text-light" href="#services">Services</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#contact">Contact</a>
+                  <a className="nav-link text-light" href="#contact">Contact</a>
                 </li>
               </ul>
             </div>
@@ -70,25 +69,24 @@ export default function RootLayout({ children }) {
 
         {children}
 
-        {/* ================= FOOTER ================= */}
-        <footer className="bg-dark text-white text-center py-4 mt-5">
+        {/* FOOTER */}
+        <footer className="text-center text-light py-4 mt-5" style={{background:"#0f172a"}}>
           © {new Date().getFullYear()} Core360IT. All rights reserved.
         </footer>
 
-        {/* Bootstrap JS */}
         <Script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
           strategy="afterInteractive"
         />
 
-        {/* Force carousel autoplay (Next.js safe) */}
+        {/* Fast 1-second Carousel */}
         <Script id="carousel-init" strategy="afterInteractive">
 {`
 document.addEventListener("DOMContentLoaded", function () {
-  const carouselElement = document.querySelector("#heroCarousel");
-  if (carouselElement && typeof bootstrap !== "undefined") {
-    new bootstrap.Carousel(carouselElement, {
-      interval: 2500,
+  const el = document.querySelector("#heroCarousel");
+  if (el && typeof bootstrap !== "undefined") {
+    new bootstrap.Carousel(el, {
+      interval: 1000,
       ride: "carousel",
       pause: false,
       wrap: true
