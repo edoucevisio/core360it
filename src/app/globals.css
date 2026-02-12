@@ -4,9 +4,7 @@ html {
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #0b1120, #0f172a, #1e293b);
-  color: white;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
 /* ================= HERO ================= */
