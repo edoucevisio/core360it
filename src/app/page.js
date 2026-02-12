@@ -12,26 +12,17 @@ export default function Home() {
 
   const [current, setCurrent] = useState(0);
 
-  const [count, setCount] = useState(0);
-
   useEffect(() => {
-    const slider = setInterval(() => {
+    const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 3000);
 
-    const counter = setInterval(() => {
-      setCount((prev) => (prev < 100 ? prev + 1 : 100));
-    }, 20);
-
-    return () => {
-      clearInterval(slider);
-      clearInterval(counter);
-    };
+    return () => clearInterval(interval);
   }, []);
 
   return (
     <>
-      {/* HERO SECTION */}
+      {/* HERO */}
       <section
         style={{
           minHeight: "100vh",
@@ -76,94 +67,64 @@ export default function Home() {
             ))}
           </div>
 
-          {/* HERO TEXT */}
+          {/* TEXT */}
           <div className="mt-5 text-white">
             <h2 className="fw-bold">
               Strategic IT. Global Reach. 360° Coverage.
             </h2>
+
             <p className="lead mt-3 opacity-75">
-              Enterprise IT consulting, cloud architecture and cybersecurity expertise.
+              Enterprise IT consulting, cloud solutions and cybersecurity expertise.
             </p>
+
+            <button
+              onClick={() =>
+                document
+                  .getElementById("services")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+              className="btn btn-success btn-lg mt-3"
+            >
+              Explore Services
+            </button>
           </div>
+
         </div>
       </section>
 
-      {/* WHY CHOOSE US */}
+      {/* SERVICES */}
       <section
+        id="services"
         style={{
           background: "#111827",
-          padding: "100px 0"
+          padding: "120px 0",
+          scrollMarginTop: "120px"
         }}
       >
         <div className="container text-center text-white">
-          <h2 className="mb-5">Why Choose Core360IT</h2>
+          <h2 className="mb-5">Our Services</h2>
 
           <div className="row g-4">
-            {[
-              {
-                title: "Enterprise Expertise",
-                text: "Deep technical knowledge across cloud, infrastructure and cybersecurity."
-              },
-              {
-                title: "24/7 Proactive Monitoring",
-                text: "We prevent problems before they impact your business."
-              },
-              {
-                title: "Scalable Solutions",
-                text: "Designed to grow with your organization."
-              }
-            ].map((item, i) => (
-              <div key={i} className="col-md-4">
-                <div
-                  style={{
-                    background: "rgba(255,255,255,0.05)",
-                    backdropFilter: "blur(10px)",
-                    borderRadius: "20px",
-                    padding: "40px",
-                    border: "1px solid rgba(255,255,255,0.1)",
-                    transition: "transform 0.3s ease"
-                  }}
-                  className="h-100"
-                >
-                  <h5>{item.title}</h5>
-                  <p className="mt-3 opacity-75">{item.text}</p>
-                </div>
+            <div className="col-md-4">
+              <div className="p-4 rounded shadow" style={{ background: "#1e293b" }}>
+                <h5>IT Consulting</h5>
+                <p>Strategic advisory aligned with business transformation.</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* STATS SECTION */}
-      <section
-        style={{
-          background: "linear-gradient(135deg,#0f172a,#1e293b)",
-          padding: "100px 0"
-        }}
-      >
-        <div className="container text-center text-white">
-          <div className="row g-4">
-
-            <div className="col-md-3">
-              <h1 className="fw-bold text-success">{count}%</h1>
-              <p className="opacity-75">Client Satisfaction</p>
             </div>
 
-            <div className="col-md-3">
-              <h1 className="fw-bold text-success">24/7</h1>
-              <p className="opacity-75">Monitoring & Support</p>
+            <div className="col-md-4">
+              <div className="p-4 rounded shadow" style={{ background: "#1e293b" }}>
+                <h5>Managed IT Services</h5>
+                <p>Proactive monitoring and cloud infrastructure management.</p>
+              </div>
             </div>
 
-            <div className="col-md-3">
-              <h1 className="fw-bold text-success">100+</h1>
-              <p className="opacity-75">Projects Delivered</p>
+            <div className="col-md-4">
+              <div className="p-4 rounded shadow" style={{ background: "#1e293b" }}>
+                <h5>Cybersecurity</h5>
+                <p>Advanced protection and compliance frameworks.</p>
+              </div>
             </div>
-
-            <div className="col-md-3">
-              <h1 className="fw-bold text-success">10+</h1>
-              <p className="opacity-75">Years Experience</p>
-            </div>
-
           </div>
         </div>
       </section>
@@ -173,11 +134,13 @@ export default function Home() {
         id="contact"
         style={{
           background: "#0f172a",
-          padding: "100px 0"
+          padding: "120px 0",
+          scrollMarginTop: "120px"
         }}
       >
         <div className="container text-center text-white">
           <h2>Contact Core360IT</h2>
+
           <p className="mt-4 fs-5">📧 support@core360it.com</p>
           <p className="fs-5">📞 +230 5251 9002</p>
 
