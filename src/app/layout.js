@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
             <a className="navbar-brand d-flex align-items-center" href="#">
               <img
                 src="https://assets.core360it.com/core360ilogo.png"
-                alt="Core360IT"
+                alt="core360it ltd"
                 height="40"
                 style={{
                   borderRadius: "8px",
