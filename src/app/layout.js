@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
                   marginRight: "10px"
                 }}
               />
-              <span className="fw-bold">Core360IT</span>
+              <span className="fw-bold">core360it ltd</span>
             </a>
 
             <div className="collapse navbar-collapse justify-content-end">
