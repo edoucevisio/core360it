@@ -76,7 +76,7 @@ export default function RootLayout({ children }) {
           }}
         >
           <img
-            src="https://assets.core360it.com/whatsapp.webp"
+            src="https://assets.core360it.com/callwhatsapp.gif"
             alt="WhatsApp"
             width="55"
             style={{
