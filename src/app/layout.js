@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
             <a className="navbar-brand d-flex align-items-center" href="#">
               <img
                 src="https://assets.core360it.com/core360ilogo.png"
-                alt="core360it ltd"
+                alt="Core360IT"
                 height="40"
                 style={{
                   borderRadius: "8px",
@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
                   marginRight: "10px"
                 }}
               />
-              <span className="fw-bold">core360it ltd</span>
+              <span className="fw-bold">Core360IT</span>
             </a>
 
             <div className="collapse navbar-collapse justify-content-end">
