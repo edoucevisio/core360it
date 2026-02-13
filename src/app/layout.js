@@ -76,7 +76,7 @@ export default function RootLayout({ children }) {
           }}
         >
           <img
-            src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+            src="https://assets.core360it.com/whatsapp.webp"
             alt="WhatsApp"
             width="55"
             style={{
